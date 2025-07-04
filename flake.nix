@@ -24,7 +24,7 @@
           # nix hash to-sri --type sha256 `sha256sum pianoteq_linux_v841.7z`
           src = requireFile {
             name = "pianoteq_linux_v841.7z";
-            message = "Download the file from: https://www.modartt.com/download?file=pianoteq_linux_v841.7z and add it to the nix store manually: nix-store --add-fixed sha256 ~/Downloads/pianoteq_linux_v841.7z";
+            message = "Follow instructions at https://github.com/Kemichal/nix-pianoteq/tree/pianoteq8";
             sha256 = "sha256-PPRSZ0qnDfWyTaQGuB0osWvIPHYMPaSB159FDrXaY0E=";
           };
 
