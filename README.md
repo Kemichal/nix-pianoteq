@@ -1,10 +1,8 @@
 # Description
 
-A nix flake that installs Pianoteq7 on NixOS. The license key and binary are still required and have to be acquired manually from [https://www.modartt.com/](https://www.modartt.com/).
+A nix flake that installs Pianoteq8 on NixOS. The license key and binary are still required and have to be acquired manually from [https://www.modartt.com/](https://www.modartt.com/).
 
 # Usage
-
-Right now, I am really new to NixOS and Nix so this might be an awkward way of installing a package. I might try to enhance this in the future and maybe even put it in the NUR.
 
 1. Download the `pianoteq_linux_v841.7z` file from [https://www.modartt.com/](https://www.modartt.com/)
 2. Put `pianoteq_linux_v841.7z` into the nix store and add a gcroot:
