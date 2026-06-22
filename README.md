@@ -4,12 +4,12 @@ A nix flake that installs Pianoteq8 on NixOS. The license key and binary are sti
 
 # Usage
 
-1. Download the `pianoteq_linux_v841.7z` file from [https://www.modartt.com/](https://www.modartt.com/)
-2. Put `pianoteq_linux_v841.7z` into the nix store and add a gcroot:
+1. Download the `pianoteq_linux_v843.7z` file from [https://www.modartt.com/](https://www.modartt.com/)
+2. Put `pianoteq_linux_v843.7z` into the nix store and add a gcroot:
 ```sh
-STORE_PATH=$(nix-store --add-fixed sha256 ./pianoteq_linux_v841.7z)
+STORE_PATH=$(nix-store --add-fixed sha256 ./pianoteq_linux_v843.7z)
 mkdir -p ~/.nix-gcroots
-nix-store --realise --add-root ~/.nix-gcroots/pianoteq_linux_v841.7z --indirect $STORE_PATH
+nix-store --realise --add-root ~/.nix-gcroots/pianoteq_linux_v843.7z --indirect $STORE_PATH
 ```
 
 3. In your main `flake.nix` file add the following line to your inputs:

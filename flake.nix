@@ -11,7 +11,7 @@
         with import nixpkgs { system = "x86_64-linux"; };
         stdenv.mkDerivation rec {
           pname = "pianoteq8";
-          version = "8.4.1";
+          version = "8.4.3";
 
           icon = fetchurl {
             name = "pianoteq_icon_128";
@@ -21,15 +21,15 @@
 
           # IMPORTANT: Use the following command to retrive the correct hash.
           # Otherwise the file is not found in the nix store (Add it first ofc)
-          # nix hash to-sri --type sha256 `sha256sum pianoteq_linux_v841.7z`
+          # nix hash to-sri --type sha256 `sha256sum pianoteq_linux_v843.7z`
           src = requireFile {
-            name = "pianoteq_linux_v841.7z";
+            name = "pianoteq_linux_v843.7z";
             message = "Follow instructions at https://github.com/Kemichal/nix-pianoteq/tree/pianoteq8";
-            sha256 = "sha256-PPRSZ0qnDfWyTaQGuB0osWvIPHYMPaSB159FDrXaY0E=";
+            sha256 = "sha256-72eV+d3jwRZJSs6I4e055ZrR/dvnhwAaM63eZEQAtOg=";
           };
 
           # Alternative: Downloaded manually and place in this directory
-          # src = ./pianoteq_linux_v841.7z;
+          # src = ./pianoteq_linux_v843.7z;
 
           desktopItems = [
             (makeDesktopItem {
@@ -48,8 +48,8 @@
           libPath = lib.makeLibraryPath [
             alsa-lib
             freetype
-            xorg.libX11
-            xorg.libXext
+            libx11
+            libxext
             stdenv.cc.cc.lib
             libjack2
             lv2
